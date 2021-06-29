@@ -21,6 +21,7 @@ public class TTTJPanel extends JPanel
 	int xpos;
 	int ypos;
 	char value = ' ';
+	public static boolean spielVorbei = false;
 	
 	
 
@@ -69,14 +70,16 @@ public class TTTJPanel extends JPanel
 				}
 				if(TTTJPanel.this.horizontalgewonnen() || TTTJPanel.this.vertikalgewonnen() || TTTJPanel.this.diagonalgewonnen())
 				{
+					spielVorbei = true;
 					JOptionPane.showMessageDialog(TTTJPanel.this, "Spiel vorbei, " + TTTJPanel.this.value + " hat gewonnen");
 				}
-				if(StarteSpiel.amZug>8)
+				else if(StarteSpiel.amZug>8)
 				{
+					spielVorbei = true;
 					JOptionPane.showMessageDialog(TTTJPanel.this, "Spiel vorbei, UNENTSCHIEDEN");
 					System.exit(0);
 				;}
-				if(!StarteSpiel.PLAYER2_IS_HUMAN)
+				if(!StarteSpiel.PLAYER2_IS_HUMAN && !spielVorbei)
 				{
 					JLabel o = new JLabel("O");
 					int x = -1; int y = -1;

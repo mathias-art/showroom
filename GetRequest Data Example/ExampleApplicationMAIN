@@ -1,0 +1,44 @@
+package GetRequestData.example;
+
+import java.io.IOException;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
+import java.util.List;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
+@SpringBootApplication
+public class ExampleApplication {
+	
+	private static final String POSTS_API_URL =  "https://daeosss6.eur.ad.sag:8888/palamida/api/request/getRequests/1";
+
+	public static void main(String[] args) throws IOException, InterruptedException { //Vorlage: https://www.youtube.com/watch?v=5MmlRZZxTqk
+		                                                                              // Send HTTP GET Request using Java 11 HttpClient and parse JSON response into objects
+		                                                                              // 33,071 viewsMar 13, 2020; Dan Vega;
+		                                                                              // von: https://dev.to/therealdanvega/send-an-http-get-request-using-java-11-httpclient-1iki
+		                                                                              // aufgerufen am 21.12.2021 (Mathias Hüther)
+		SpringApplication.run(ExampleApplication.class, args);
+		HttpClient client = HttpClient.newHttpClient();
+		HttpRequest request = HttpRequest.newBuilder()
+				.GET()
+				.header("acccept", "application/json")
+				.uri(URI.create(POSTS_API_URL))
+				.build();
+		HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+		
+		//System.out.println(response.body());
+		
+		//parse JSON into objects:
+		ObjectMapper mapper = new ObjectMapper();
+		List<Post> posts = mapper.readValue(response.body(), new TypeReference<List<Post>>() {});
+		
+		posts.forEach(System.out::println);
+	}
+
+}

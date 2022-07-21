@@ -1,0 +1,69 @@
+package GetRequestData.example;
+
+public class Post {
+	
+	private int id;
+	private String componentName;
+	private String componentVersion;
+	private String licenseName;
+	private String projectName;
+	private String teamName;
+	private String status;
+	private boolean openCOU;
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getComponentName() {
+		return componentName;
+	}
+	public void setComponentName(String componentName) {
+		this.componentName = componentName;
+	}
+	public String getComponentVersion() {
+		return componentVersion;
+	}
+	public void setComponentVersion(String componentVersion) {
+		this.componentVersion = componentVersion;
+	}
+	public String getLicenseName() {
+		return licenseName;
+	}
+	public void setLicenseName(String licenseName) {
+		this.licenseName = licenseName;
+	}
+	public String getProjectName() {
+		return projectName;
+	}
+	public void setProjectName(String projectName) {
+		this.projectName = projectName;
+	}
+	public String getTeamName() {
+		return teamName;
+	}
+	public void setTeamName(String teamName) {
+		this.teamName = teamName;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public boolean isOpenCOU() {
+		return openCOU;
+	}
+	public void setOpenCOU(boolean openCOU) {
+		this.openCOU = openCOU;
+	}
+	@Override
+	public String toString() {
+		return "Post [id=" + id + ", componentName=" + componentName + "]";
+	}
+	
+	
+	
+
+}

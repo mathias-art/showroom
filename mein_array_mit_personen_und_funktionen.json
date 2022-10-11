@@ -1,0 +1,59 @@
+{ "personen"
+[
+{
+	"name": "Maria Wall",
+	"alter": "35",
+	"ort": "Hamburg",
+	"sprachen": [ "deutsch", "englisch", "dänisch", "schwedisch"],
+	"angestellt":
+	{
+		"firma": "New Work AG",
+		"position": "Frontend-Entwicklerin"
+	},
+	{
+	"name": "Hannah Jung",
+	"alter": "25",
+	"ort": "München",
+	"sprachen": [ "deutsch", "englisch", "französisch", "italienisch"],
+	"angestellt":
+	{
+		"firma": "New World GmbH",
+		"position": "Backend-Entwicklerin"
+	},
+	{
+	"name": "Marie Claire",
+	"alter": "50",
+	"ort": "Nancy",
+	"sprachen": [ "französisch","deutsch", "englisch",  "italienisch"],
+	"angestellt":
+	{
+		"firma": "Big Game AG",
+		"position": "Java Developer"
+	},
+{
+	"name": "Fernando Alban",
+	"alter": "75",
+	"ort": "Madrid",
+	"sprachen": [ "spanisch", "französisch", "englisch", "deutsch"]
+},
+{
+	"name": "Henry Hood",
+	"alter": "45",
+	"ort": "Christchurch",
+	"sprachen": [ "englisch", "walisisch", "französisch", "spanisch"]
+},
+{
+	"name": "Elias Feld",
+	"alter": "50",
+	"ort": "Nürnberg",
+	"sprachen": [ "deutsch", "englisch", "französisch"],
+	"angestellt":
+	{
+		"firma": "Holzbau Maurer GmbH",
+		"position": "Produktionsleiter"
+	}
+	
+}
+]
+}
+	
